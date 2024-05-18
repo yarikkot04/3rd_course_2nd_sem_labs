@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card-list">
+        {{#if technologicalCards.length}}
+        {{#each technologicalCards}}
+                <div class="card">
+                <h2>Technological card id: {{_id}}</h2>
+                <a href="/cards/{{_id}}" class="card-link">Review</a>
+                <a href="/delete/{{_id}}" class="delete-button">Delete</a>
+                </div>
+        {{/each}}
+        {{else}}
+            <h1>No technological cards</h1>
+        {{/if}}
+    </div>
+</div>

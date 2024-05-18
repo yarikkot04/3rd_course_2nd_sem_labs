@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{#if isMain}}
+    <link rel="stylesheet" href="/index.css">
+  {{/if}}
+  {{#if isAdd}}
+    <link rel="stylesheet" href="/addNewCardForm.css">
+  {{/if}}
+  {{#if isCards}}
+    <link rel="stylesheet" href="/cards.css">
+  {{/if}}
+  {{#if isTechCard}}
+    <link rel="stylesheet" href="/techCard.css">
+  {{/if}}
+  {{#if isEdit}}
+    <link rel="stylesheet" href="/editCard.css">
+  {{/if}}
+  {{#if isDelete}}
+    <link rel="stylesheet" href="/deleteCard.css">
+  {{/if}}
+  <title>{{title}}</title>
+</head>

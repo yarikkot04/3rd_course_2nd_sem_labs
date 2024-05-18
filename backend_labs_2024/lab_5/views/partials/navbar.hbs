@@ -1,0 +1,22 @@
+<header>
+    <nav>
+        <ul>
+            {{#if isMain}}
+                <li><a href="/" class="active">Home</a></li>
+            {{else}}
+                <li><a href="/">Home</a></li>
+            {{/if}}
+            {{#if isCards}}
+                <li><a href="/cards" class="active">Cards</a></li>
+            {{else}}
+                <li><a href="/cards">Cards</a></li>
+            {{/if}}
+            {{#if isAdd}}
+                <li><a href="/add" class="active">New Card</a></li>
+            {{else}}
+                <li><a href="/add">New Card</a></li>
+            {{/if}}
+
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,12 @@
+<form action="/delete" method="post">
+  <div class="confirmation-container">
+    <div class="confirmation-message">
+      <h1>Do you really want to remove the technology card with id: {{cardId}}?</h1>
+      <div class="confirmation-buttons">
+        <input type="hidden" name="id" value="{{cardId}}">
+        <input type="button" value="Yes">
+        <a href="/cards">No</a>
+      </div>
+    </div>
+  </div>
+</form>

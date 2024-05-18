@@ -1,0 +1,28 @@
+<div class="container">
+    <p class="alert">Edit tech card with id: {{selectedTechCard._id}}</p>
+    <form class="edit-form">
+        <input type="hidden" id="cardId" name="cardId" value="{{selectedTechCard._id}}">
+        <div class="form-group">
+            <label for="detailName">Detail name:</label>
+            <input type="text" id="detailName" name="detailName" value="{{selectedTechCard.detailName}}">
+        </div>
+        <div class="form-group">
+            <label for="processTypeName">Process Type name:</label>
+            <input type="text" id="processTypeName" name="processTypeName" value="{{selectedTechCard.processTypeName}}">
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" pattern="\d+" title="Please enter only numbers" value="{{selectedTechCard.duration}}">
+        </div>
+        <div class="form-group">
+            <label for="creationDate">Creation Date:</label>
+            <input type="text" id="creationDate" name="creationDate" pattern="\d{4}-\d{2}-\d{2}" title="Please enter date in YYYY-MM-DD format" value="{{dateToStr}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description">{{selectedTechCard.description}}</textarea>
+        </div>
+        <button type="button">Submit</button>
+        <a href="/cards/{{selectedTechCard._id}}" class="back-button">Back</a>
+    </form>
+</div>
