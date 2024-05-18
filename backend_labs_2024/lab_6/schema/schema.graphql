@@ -1,0 +1,59 @@
+type Detail { 
+  id : ID!
+  name : String!
+  description : String!
+}
+
+type ProcType {
+  id : ID!
+  name : String!
+  description : String!
+}
+
+type TechCard {
+  id : ID!
+  detail_ID : Detail!
+  procType_ID : ProcType!
+  duration : Int!
+  creationDate : String
+  description : String!
+}
+
+type Query {
+  getTechCardById(id: ID): TechCard
+  getProcTypeById(id: ID): ProcType
+  getDetailById(id: ID): Detail
+  getAllTechCards : [TechCard!]
+  getAllProcTypes : [ProcType!]
+  getAllDetails : [Detail!]
+}
+
+input newTechCard {
+  detail_ID : ID
+  procType_ID : ID
+  duration : Int
+  creationDate : String
+  description : String
+}
+ 
+input newDetail {
+  name : String
+  description : String
+}
+
+input newProcType {
+  name : String
+  description : String
+}
+
+type Mutation {
+  addTechCard(techCard: newTechCard): [TechCard!]!
+  addDetail(detail: newDetail): [Detail!]!
+  addProcType(procType: newProcType): [ProcType!]!
+  updateTechCard(id: ID!, body: newTechCard): TechCard
+  updateProcType(id: ID!, body: newProcType): ProcType
+  updateDetail(id: ID!, body: newDetail): Detail
+  deleteTechCard(id: ID!): [TechCard!]!
+  deleteProcType(id: ID!): [ProcType!]!
+  deleteDetail(id: ID!): [Detail!]!
+}
