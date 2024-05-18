@@ -1,0 +1,51 @@
+.back-button {
+  display: inline-block;
+  padding: 8px 16px; 
+  background-color: #f0768b;
+  color: #e2e1e1;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: #ffc0cb;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.city-weather {
+  background-color: #4f3d40;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #e2e1e1;
+}
+
+.city-weather h1 {
+  color: #f0768b;
+}
+
+.weather-image img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info p {
+  margin: 10px 0;
+}
+
+.weather-info strong {
+  color: #f0768b;
+}
